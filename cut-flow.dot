@@ -1,0 +1,23 @@
+digraph {
+	A
+	B
+	C
+	D
+	E
+	S[rank=source]
+	T[rank=sink]
+	subgraph clusterS { color=lightgray; S A B C }
+	subgraph clusterT { color=lightgray; D E T }
+	A -> D [label="1:1" color=red, len=1.5]
+	A -> C [label="0:2" color=black, len=1.5]
+	B -> C [label="2:2" color=black, len=1.5]
+	B -> E [label="0:2" color=red, len=1.5]
+	C -> D [label="0:2" color=red, len=1.5]
+	C -> E [label="1:4" color=red, len=1.5]
+	C -> T [label="2:2" color=red, len=1.5]
+	D -> T [label="1:2" color=black, len=1.5]
+	E -> T [label="1:1" color=black, len=1.5]
+	S -> A [label="1:2" color=black, len=1.5]
+	S -> B [label="2:3" color=black, len=1.5]
+	S -> C [label="1:1" color=black, len=1.5]
+}

@@ -1,0 +1,18 @@
+graph G {
+  size="2.5,1.5";
+
+  {rank = same; A B C }
+  {rank = same; D E F }
+
+  A -- B [label="1",style=bold,color=green];
+  A -- D [label="4"];
+  A -- E [label="3"];
+  B -- E [label="2",style=bold,color=green];
+  B -- C [style=invis];
+  C -- E [label="4",style=bold,color=green];
+  C -- F [label="2",style=bold,color=green];
+  D -- B [label="4"] [constraint=false];
+  D -- E [label="4",style=bold,color=green];
+  E -- F [label="7"];
+  
+}

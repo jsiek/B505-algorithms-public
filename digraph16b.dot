@@ -1,0 +1,20 @@
+/*
+ round 1
+ S: 0, A: 4, C: 1
+ round 2
+ D: 2
+ round 3
+ E: 4, A: 3
+*/
+digraph G {
+  { rank = same;  S [label="S, 0"]; A [label="A, 3"]; B [label="B, 5"] }
+  { rank = same;  C [label="C, 1"]; D [label="D, 2"]; E [label="E, 4"] }
+  D -> A [label="1"];
+  D -> E [label="2"];
+  B -> E [label="1"];
+  C -> D [label="1"];
+  A -> B [label="1"];
+  S -> A [label="4"];
+  S -> C [label="1"];
+}
+

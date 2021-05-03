@@ -1,0 +1,14 @@
+graph G {
+  size="2.5,1.5";
+
+  {rank = same; A B C }
+  {rank = same; D E F }
+
+  A -- B [label="1"];
+  B -- E [label="2"];
+  B -- C [style=invis];
+  C -- E [label="4"];
+  C -- F [label="2"];
+  D -- E [label="4"];
+  
+}

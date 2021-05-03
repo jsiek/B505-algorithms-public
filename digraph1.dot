@@ -1,0 +1,31 @@
+digraph G {
+  0 -> 0;
+  1 -> 2;
+  1 -> 4;
+  2 -> 5;
+  3 -> 0 [constraint = false];
+  3 -> 5;
+  4 -> 2 [constraint = false];
+  5 -> 4 [constraint = false];
+  4 -> 5 [style = invis];
+  subgraph cluster0 {
+      style=filled;
+      color=white;
+      0;
+  }
+  subgraph cluster1 {
+      style=filled;
+      color=white;
+    1;
+  }
+  subgraph cluster2 {
+      style=filled;
+      color=white;
+    3;
+  }
+  subgraph cluster3 {
+      style=filled;
+      color=white;
+    2; 4; 5;
+  }
+}

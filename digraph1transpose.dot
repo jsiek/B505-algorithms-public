@@ -1,0 +1,36 @@
+digraph G {
+  0[color=green];
+  1[color=green];
+  2[color=green];
+
+  0 -> 0;
+  2 -> 1;
+  4 -> 1;
+  5 -> 2;
+  0 -> 3 [constraint = false, style=bold, color=green];
+  5 -> 3;
+  2 -> 4 [constraint = false, style=bold, color=green];
+  4 -> 5 [constraint = false, style=bold, color=green];
+  5 -> 4 [style = invis];
+
+  subgraph cluster0 {
+      style=filled;
+      color=white;
+      0;
+  }
+  subgraph cluster1 {
+      style=filled;
+      color=white;
+    1;
+  }
+  subgraph cluster2 {
+      style=filled;
+      color=white;
+    3;
+  }
+  subgraph cluster3 {
+      style=filled;
+      color=white;
+    2; 4; 5;
+  }
+ }

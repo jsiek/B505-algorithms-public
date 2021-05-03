@@ -1,0 +1,20 @@
+digraph G {
+  size = "2,2";
+
+  { rank = same; T X }
+  { rank = same; S }
+  { rank = same; Y Z }
+
+  T -> X [label = "1"];
+  T -> Y [label = "2"];
+  T -> S [style = invis];
+  X -> Z [label = "4"];
+  S -> T [label = "10"];
+  S -> Y [label = "5"];
+  Y -> T [label = "3"] [constraint = false];
+  Y -> X [label = "9"] [constraint = false];
+  Y -> Z [label = "2"];
+  Z -> S [label = "7"] [constraint = false];
+  Z -> X [label = "6"] [constraint = false];
+
+}

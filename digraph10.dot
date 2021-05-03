@@ -1,0 +1,40 @@
+digraph G {
+
+  { rank = same; a b c d }
+  { rank = same; e f g h }
+  { rank = same; i j k l }
+
+  g [label = "g 0/23",color=green];
+  c [label = "c 1/8"];
+  d [label = "d 2/7"];
+  h [label = "h 3/6"];
+  l [label = "l 4/5"];
+  k [label = "k 9/22"];
+  j [label = "j 10/21"];
+  f [label = "f 11/20"];
+  b [label = "b 12/19"];
+  a [label = "a 13/18"];
+  e [label = "e 14/17"];
+  i [label = "i 15/16"];
+
+  a -> e [color=green,style=bold];
+  a -> b [style = invis ];
+  b -> a [constraint = false,color=green,style=bold];
+  b -> c [style = invis ];
+  c -> d [color=green,style=bold];
+  d -> h [color=green,style=bold];
+  e -> i[color=green,style=bold];
+  e -> f [style = invis ];
+  f -> b [constraint = false,color=green,style=bold];
+  f -> e [constraint = false,color=blue];
+  f -> g [color=red];
+  g -> k[color=green,style=bold];
+  g -> c [constraint = false,color=green,style=bold];
+  g -> h [style = invis ];
+  h -> l [color=green,style=bold];
+  i -> j [style = invis ];
+  j -> f [constraint = false,color=green,style=bold];
+  j -> k [style = invis ];
+  k -> j[color=green,style=bold];
+  k -> l
+}

@@ -1,0 +1,16 @@
+digraph G {
+  size = "2,2";
+
+  { rank = same; S A B }
+  { rank = same; C D E }
+
+  S -> A [label = "1"];
+  S -> C [label = "8"];
+  A -> D [label = "4"];
+  A -> B [label = "1"];
+  B -> E [label = "1"];
+  D -> C [label = "1"] [constraint = false];
+  D -> A [label = "2"] [constraint = false];
+  E -> D [label = "3"] [constraint = false];
+
+}

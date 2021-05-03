@@ -1,0 +1,41 @@
+digraph G {
+  a -> e [constraint=false];
+  b -> a [style=bold,color=green];
+  c -> d [style=bold,color=green];
+  d -> h [style=bold,color=green];
+  e -> i [style=bold,color=green];
+  f -> b [style=bold,color=green];
+  f -> e [style=bold,color=green];
+  f -> g [constraint=false];
+  g -> k [style=bold,color=green];
+  g -> c [style=bold,color=green];
+  h -> l [constraint=false];
+  j -> f [style=bold,color=green];
+  k -> j [style=bold,color=green];
+  k -> l [style=bold,color=green];
+
+  subgraph cluster0 {
+    label="0"; labeljust="r";
+    g
+  }
+  subgraph cluster1 {
+    label="1"; labeljust="r";
+   c k
+  }
+  subgraph cluster2 {
+    label="2"; labeljust="r";
+   d l j
+  }
+  subgraph cluster3 {
+    label="3"; labeljust="r";
+   f h
+  }
+  subgraph cluster4 {
+    label="4"; labeljust="r";
+   e b
+  }
+  subgraph cluster5 {
+    label="5"; labeljust="r";
+   a i
+  }
+}

@@ -1,0 +1,28 @@
+digraph G {
+  g[color=green]
+
+  { rank = same; a b c d }
+  { rank = same; e f g h }
+  { rank = same; i j k l }
+  
+  a -> e [color=green,style=bold];
+  a -> b [style = invis ];
+  b -> a [constraint = false,color=green,style=bold];
+  b -> c [style = invis ];
+  c -> d [color=green,style=bold];
+  d -> h [color=green,style=bold];
+  e -> i[color=green,style=bold];
+  e -> f [style = invis ];
+  f -> b [constraint = false,color=green,style=bold];
+  f -> e [constraint = false];
+  f -> g;
+  g -> k[color=green,style=bold];
+  g -> c [constraint = false,color=green,style=bold];
+  g -> h [style = invis ];
+  h -> l [color=green,style=bold];
+  i -> j [style = invis ];
+  j -> f [constraint = false,color=green,style=bold];
+  j -> k [style = invis ];
+  k -> j[color=green,style=bold];
+  k -> l
+}

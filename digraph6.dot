@@ -1,0 +1,27 @@
+digraph G {
+  size = "3,3";
+
+  { rank = same; a b c d }
+  { rank = same; e f g h }
+  { rank = same; i j k l }
+  
+  a -> e;
+  a -> b [style = invis ];
+  b -> a [constraint = false];
+  b -> c [style = invis ];
+  c -> d;
+  d -> h;
+  e -> i;
+  e -> f [style = invis ];
+  f -> b [constraint = false];
+  f -> g [style = invis ];
+  g -> k;
+  g -> c [constraint = false];
+  g -> h [style = invis ];
+  h -> l;
+  i -> j [style = invis ];
+  j -> f [constraint = false];
+  j -> k [style = invis ];
+  k -> j;
+  k -> l [style = invis ];
+}

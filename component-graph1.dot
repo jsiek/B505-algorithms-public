@@ -1,0 +1,8 @@
+digraph C {
+  { rank = same; A B }
+  { rank = same; E D }
+  
+  E -> A;
+  E -> D;
+  B -> D;
+}

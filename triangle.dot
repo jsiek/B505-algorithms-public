@@ -1,0 +1,7 @@
+digraph G {
+  { rank = same; u v }
+  
+  s -> u [style=dashed,label="d(s,u)"]
+  u -> v [color=red,label="w(u,v)"];
+  s -> v [style=dashed,label="d(s,v)"];
+}

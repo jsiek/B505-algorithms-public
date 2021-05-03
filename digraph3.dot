@@ -1,0 +1,17 @@
+digraph G {
+  size = "2,2";
+
+  { rank = same; a b c }
+  { rank = same; d e }
+  { rank = same; f }
+
+  a -> d;
+  a -> b [style=invis];
+  b -> d;
+  b -> c [style=invis];
+  c -> e;
+  d -> e [style=invis];
+  d -> f;
+  e -> f;
+
+}
